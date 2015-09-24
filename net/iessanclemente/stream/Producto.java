@@ -1,4 +1,4 @@
-package net.iessanclemente;
+package net.iessanclemente.stream;
 public class Producto implements java.io.Serializable
 {
 	private int identificador;
