@@ -1,0 +1,375 @@
+<span id="a__Manexo_de_ficheiros_"></span><span></span>Manexo de ficheiros. {.P26}
+===========================================================================
+
+1.   
+
+2.  <span
+    style="display:block;float:left;min-width:0,499cm;">1.</span>Crea
+    unha clase serializable de nome Produto, que teña como
+    atributos:<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>identificador,
+    enteiro<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>nome do
+    produto: cadea de caracteres<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>prezo:
+    número real.<span class="odfLiEnd"></span> 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">2.</span>Crea un
+    programa que, partindo de arrays de 5 números enteiros, 5 nomes de
+    produtos e 5 prezos, escriba nun ficheiro binario de nome
+    produtos.dat obxectos da clase produto creados usando a información
+    anterior.<span class="odfLiEnd"></span> 
+
+2.  <span
+    style="display:block;float:left;min-width:0,499cm;">3.</span>Crea un
+    programa que mostre por pantalla a información gardada en
+    produtos.dat.<span class="odfLiEnd"></span> 
+
+3.  <span
+    style="display:block;float:left;min-width:0,499cm;">4.</span>Indica
+    cales das seguintes afirmacións sobre SAX e DOM son correctas:<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Mediante
+    SAX cárgase todo o ficheiro XML en memoria e lese de forma
+    secuencial producindo unha secuencia de eventos.<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Mediante
+    DOM almacénase toda a estrutura do documento XML en memoria en forma
+    de árbore con nodos pai, nodos fillo e nodos finais.<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>SAX é
+    máis complexo de programar que DOM.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>O tipo
+    de procesamento de SAX necesita máis recursos de memoria e tempo
+    sobre todo se os ficheiros XML a procesar son bastante grandes e
+    complexos.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>O tipo
+    de procesamento de DOM impide ter unha visión global do documento
+    polo que navegar.<span class="odfLiEnd"></span> 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">5.</span>¿Cal é
+    a función da clase org.w3c.dom.Document?<span
+    class="odfLiEnd"></span> 
+
+<span> </span><span> a. Procesar o documento XML.</span>
+
+<span> </span><span> b. Almacenar o documento XML nun modelo de obxectos
+accesible desde Java.</span>
+
+<span> </span><span> c. Fabricar un novo construtor de
+documentos.</span>
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">6.</span>Dado o
+    seguinte código XML: “&lt;pedido&gt;&lt;!--Datos do pedido
+    --&gt;&lt;/pedido&gt; indica que elementos DOM atopamos no
+    mesmo:<span class="odfLiEnd"></span> 
+
+    <span style="display:block;float:left;min-width:0cm"></span>a.
+    org.w3c.dom.Element<span class="odfLiEnd"></span> 
+
+    <span style="display:block;float:left;min-width:0cm"></span>b.
+    org.w3c.dom.Node<span class="odfLiEnd"></span> 
+
+    <span style="display:block;float:left;min-width:0cm"></span>c.
+    org.w3c.dom.Text<span class="odfLiEnd"></span> 
+
+    <span style="display:block;float:left;min-width:0cm"></span>d.
+    org.w3c.dom.Comment<span class="odfLiEnd"></span> 
+
+2.  <span
+    style="display:block;float:left;min-width:0,499cm;">7.</span>¿Para
+    que se utiliza un procesador de XML ou parser? <span
+    class="odfLiEnd"></span> 
+
+3.  <span
+    style="display:block;float:left;min-width:0,499cm;">8.</span>Indica
+    cales son os procesadores de XML máis empregados e as principais
+    características de cada un deles.<span class="odfLiEnd"></span> 
+
+4.  <span
+    style="display:block;float:left;min-width:0,499cm;">9.</span>Explica
+    que é XSL.<span class="odfLiEnd"></span> 
+
+5.  <span
+    style="display:block;float:left;min-width:0,499cm;">10.</span>Crea
+    un programa que xere un ficheiro xml de nome pedidos.xml, cun
+    elemento raíz de nome pedidos e 10 elementos coa estrutura
+    seguinte:<span class="odfLiEnd"></span> 
+
+    &lt;pedido&gt;
+
+        &lt;idPedido&gt; …. &lt;/idPedido&gt;
+
+        &lt;nomeCliente&gt; …. &lt;/nomeCliente&gt;
+
+        &lt;produto&gt;
+
+            &lt;idProduto&gt; .... &lt;/idProduto&gt;
+
+            &lt;descricion&gt; ..… &lt;/descricion&gt;
+
+            &lt;prezo&gt; …. &lt;/prezo&gt;
+
+        &lt;/produto&gt;
+
+    &lt;/pedido&gt;
+
+1.    No programa débense usar arrays de datos para xerar os 10
+    elementos &lt;pedido&gt;
+
+2.  <span
+    style="display:block;float:left;min-width:0,499cm;">11.</span>Crea
+    un programa que lea e mostre por pantalla o contido do
+    ficheiro pedidos.xml. Engade control de erros de maneira que nos
+    mostre unha mensaxe informativa en galego cando o ficheiro a
+    procesar non teña a estrutura esperada.<span
+    class="odfLiEnd"></span> 
+
+3.  <span
+    style="display:block;float:left;min-width:0,499cm;">12.</span>A
+    partir do ficheiro de obxectos Persoa que creamos en clase, xera un
+    documento XML usando DOM.<span class="odfLiEnd"></span> 
+
+4.  <span
+    style="display:block;float:left;min-width:0,499cm;">13.</span>Escribe
+    unha clase de nome Utilidades<span class="T5">XML</span> cos
+    seguintes métodos de clase:<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Método
+    <span class="T1">creaDOM</span><span class="T2">Baleiro</span><span
+    class="T1">,</span> que crea un DOM baleiro. <span class="T5">Recibe
+    o nome da etiqueta raíz e devolve o documento, de
+    tipo Document.</span><span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Método
+    <span class="T1">creaElementoTexto</span>, que recibe un nome de
+    etiqueta (para crear nodo tipo Element), o texto que contén a
+    etiqueta (para crear nodo tipo Text) <span class="T6">e o documento
+    (tipo Document),</span> e devolve un Element que contén o
+    texto.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Método
+    <span class="T1">XMLaDOM</span>, que recibe <span class="T7">unha
+    cadea co nome d</span>un documento XML e devolve un <span
+    class="T9">documento </span>DOM <span
+    class="T9">(tipo Document)</span>.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Método
+    <span class="T1">mostraElementoRaiz</span>, <span class="T6">recibe
+    o documento (tipo Document) e</span> mostra por pantalla o nome do
+    elemento raíz do documento.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Método
+    <span class="T1">mostraContidoElemento</span>, que recibe un
+    elemento <span class="T7">(tipo Element) </span>e mostra por
+    pantalla as etiquetas e os textos incluídos nos nodos fillo deste
+    elemento.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Método
+    <span class="T1">borraElementosEtiqueta</span>, que recibe un nome
+    de etiqueta <span class="T8">e o documento (tipo Document) </span>e
+    borra tódolos elementos con esa etiqueta.<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span><span
+    class="T10">Método </span><span class="T3">DOMaXML</span><span
+    class="T10">, que recibe un documento DOM (tipo Document) e unha
+    cadea co nome dun documento XML. Este método converte o DOM en XML.
+    </span><span class="odfLiEnd"></span> 
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">14.</span>Escribe
+    unha clase de nome CreaAxenda, que usa os métodos da clase anterior
+    para crear un documento de nome axenda.xml, coa estrutura que se
+    mostra a continuación, no que haxa 6 contactos. Úsense arrais cos
+    datos para xerar cada contacto. Engade na anterior clase os métodos
+    que consideres necesarios.<span class="odfLiEnd"></span> 
+
+&lt;axenda&gt;
+
+     &lt;contacto id="1"&gt;
+
+    <span> &lt;nome&gt;Luis&lt;/nome&gt;</span>
+
+<span> &lt;telefono&gt;222222222&lt;/telefono&gt;</span>
+
+<span> &lt;enderezo&gt;</span>
+
+<span>       &lt;rua&gt;rua Nova &lt;/rua&gt;</span>
+
+<span>       &lt;numero&gt;3&lt;/numero&gt;</span>
+
+<span> &lt;/enderezo&gt;</span>
+
+  &lt;/contacto&gt;
+
+  &lt;contacto id="2"&gt;
+
+  ....
+
+  &lt;/contacto&gt;
+
+...
+
+&lt;/axenda&gt;
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">15.</span>Escribe
+    unha clase de nome ProcesaAxenda, que usa os métodos da clase <span
+    class="T11">UtilidadesXML</span> para realizar as seguintes tarefas
+    (engade na anterior clase os métodos que consideres
+    necesarios):<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Carga en
+    memoria usando DOM o ficheiro axenda.xml<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Mostra
+    por pantalla o nome do elemento raíz.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Mostra
+    por pantalla o contido do documento.<span class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Borra os
+    elementos de nome telefono e xera axenda1.xm<span class="T12">l co
+    contido actual do documento en memoria</span>.<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Borra os
+    elementos de tipo enderezo e xera axenda2.xml <span class="T12">co
+    contido actual do documento en memoria</span>.<span
+    class="odfLiEnd"></span> 
+
+-   <span class="Bullet_20_Symbols"
+    style="display:block;float:left;min-width:0,635cm;">•</span>Engade
+    elementos de tipo correoe e xera axenda3.xml <span class="T12">co
+    contido actual do documento en memoria</span>.<span
+    class="odfLiEnd"></span> 
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">16.</span>Utiliza
+    SAX para visualizar o contido do ficheiro empregados.xml creado
+    anteriormente.<span class="odfLiEnd"></span> 
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">17.</span><span
+    class="T13">Crea un programa que, partindo do ficheiro produtos.dat
+    creado anteriormente, xere un xml, cun elemento raíz de nome
+    &lt;produtos&gt;, e un elemento de nome &lt;produto&gt; por cada un
+    dos produtos. </span><span class="T4">Usa Xstream.</span><span
+    class="odfLiEnd"></span> 
+
+ 
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">18.</span>Crea o
+    seguinte programa:<span class="odfLiEnd"></span> 
+
+<span class="T13">a. </span>Crea unha clase serializable de nome <span
+class="T13">Libro</span>, que teña como atributos:
+
+- <span class="T13">ISBN: cadea de caracteres</span>
+
+- Titulo: cadea de caracteres
+
+- Autores: lista de autores (String)
+
+- Ano: enteiro
+
+<span class="T13">b. </span>Crea <span class="T14">unha clase de nome
+UtilidadesLibro, cun método de nome xerarDatLibro que</span>, partindo
+de arrays de <span class="T15">datos, cree 6 obxectos da clase libro e
+os garde </span>nun ficheiro binario de nome <span
+class="T14">libr</span>os.dat.
+
+c\. Engade na anterior clase un método de nome mostrarDatLibro <span
+class="T13">que mostre por pantalla a información gardada en
+</span>libros<span class="T13">.dat.</span>
+
+<span class="T13">d. </span>Engade na anterior clase un método de nome
+xerarXmlLibroDom que, a<span class="T13"> partir do ficheiro
+</span>libros.dat, <span class="T13">xera un documento XML usando
+DOM.</span>
+
+<span class="T13">e. </span>Engade na anterior clase un método de nome
+xerarXmlLibroXStream que, a partir de libros.dat xera un documento XML,
+cun elemento raíz de nome &lt;libros&gt;, e un elemento &lt;libro&gt;
+por cada un dos libros.
+
+f\. Crea unha clase de nome XestionLibro, cun método main desde o cal se
+invoca ós métodos anteriores.
+
+g\. <span class="T1">Proposta de mellora</span>: engadir no libro un
+campo de nome prestado, de tipo boolean, e un campo de nome Lector, de
+tipo Persoa.
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">19.</span>Crea
+    unha plantilla de nome pedidos.xsl para transformar a html o
+    ficheiro pedidos.xml.<span class="odfLiEnd"></span> 
+
+ 
+
+ 
+
+1.  <span
+    style="display:block;float:left;min-width:0,499cm;">20.</span>Crea
+    un programa que xenere unha páxina de nome pedidos.html usando
+    pedidos.xml e pedidos.xsl.<span class="odfLiEnd"></span> 
+
+ 
