@@ -7,6 +7,8 @@ import javax.xml.transform.*;
 import org.w3c.dom.*;
 import javax.xml.transform.dom.*;
 import javax.xml.transform.stream.*;
+
+
 public class XeraXml{
 	
 
@@ -24,14 +26,16 @@ public class XeraXml{
 			d.appendChild(eraiz);
 
 			for(int i=0; i<10; i++){
+			Element pedido = d.createElement("pedido");
+			eraiz.appendChild(pedido);
 			//id
 			Element idpedido = d.createElement("idpedido");
 			idpedido.appendChild(d.createTextNode(""+lista.get(i).getId()));
-			eraiz.appendChild(idpedido);
+			pedido.appendChild(idpedido);
 			//nome
 			Element nomecliente = d.createElement("nomecliente");
 			nomecliente.appendChild(d.createTextNode(""+lista.get(i).getNome()));
-			eraiz.appendChild(nomecliente);
+			pedido.appendChild(nomecliente);
 			//producto
 			Element producto = d.createElement("producto");
 			
@@ -49,7 +53,7 @@ public class XeraXml{
 			pre.appendChild(d.createTextNode(""+lista.get(i).getProducto().getPrezo()));
 			producto.appendChild(pre);
 			 
-			eraiz.appendChild(producto);
+			pedido.appendChild(producto);
 			}
 
 			
@@ -70,5 +74,7 @@ public class XeraXml{
 		crea();
 	}
 	
-	
+	public static void lee(){
+		
+	}	
 }
