@@ -5,6 +5,9 @@ public class CreaDatPersoas{
 	
 	public static ArrayList<Persoa> encher(ArrayList<Persoa> lista){
 		//so existe neste ambito unha vez o avandona pasa o gc
+		//porque temos que darnos conta de que actua o new sobre a variable local
+		//é como se fixesemos list = this.lista
+		//non hai ningunha referencia a list e pasa o gc
 		lista = new ArrayList<>();
 		for(int i = 0; i<4; i++){
 			lista.add(new Persoa("persoa"+i,(int)(Math.random()*100)));
@@ -28,7 +31,8 @@ public class CreaDatPersoas{
 		}
 	}
 
-	public static void lee(ArrayList<Persoa> lista){
+	public static ArrayList<Persoa> lee(){
+		ArrayList<Persoa> p = new ArrayList<>();
 		File f = new File("Persoas.dat");
 
 		try(
@@ -37,16 +41,21 @@ public class CreaDatPersoas{
 		){
 		
 			while(io.available()>0)
-				System.out.println(ois.readObject());
+				p.add((Persoa)ois.readObject());
 		}catch(IOException |ClassNotFoundException e){
 			e.printStackTrace();
 		}
+		return p;
+	}
+
+	public static void creaXmlPersoas(){
+
 	}
 
 	public static void main(String... args){
 		ArrayList<Persoa> lista=null;
 		lista = encher(lista);
 		escrebe(lista);
-		lee(lista);
+		lee();
 	}
 }
