@@ -10,12 +10,15 @@ import javax.xml.transform.dom.DOMSource;
 public class UtilidadeXml{
 	
 
-	public static Document creaDomBaleiro(){
+	public static Document creaDomBaleiro(String root){
 		Document d= null;
 		try{
 			DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
 			DocumentBuilder df = fac.newDocumentBuilder();
 			d = df.newDocument();
+			d.setXmlVersion("1.0");
+			Element e = d.createElement(root);
+			d.appendChild(e);
 		}catch(Exception e){
 			e.printStackTrace();
 			return null;
@@ -24,12 +27,20 @@ public class UtilidadeXml{
 	}
 
 	public static Element creaElementoTexto(String nodo,String contido, Document documento){
-		Element el = documento.createElement("nodo");
+		Element el = documento.createElement(nodo);
 		
 		el.appendChild(documento.createTextNode(contido));
 		
 		return el;
 	}
+	public static Element creaElementoTexto(String nodo,String contido, Document documento,String atributo, String atribValor){
+		Element el = documento.createElement(nodo);
+		
+		el.appendChild(documento.createTextNode(contido));
+		el.setAttribute(atributo, atribValor);
+		return el;
+	}
+	
 	
 	public static Document XMLaDOM(String nomeDoc){
 		Document d = null;
@@ -62,6 +73,7 @@ public class UtilidadeXml{
 
 			for(int i = 0; i<nd.getLength();) ondeBorra.removeChild(nd.item(i));
 		}catch(Exception e){
+			e.printStackTrace();
 			return false;
 		}
 
@@ -80,6 +92,7 @@ public class UtilidadeXml{
 			//resource entre o tranformador e o dom
 			DOMSource doms = new DOMSource(doc);
 			//pasarlle un stream result e un streamSource
+			t.setOutputProperty(OutputKeys.INDENT, "yes");
 			t.transform(doms,sr);
 		}catch(Exception e){
 			e.printStackTrace();
