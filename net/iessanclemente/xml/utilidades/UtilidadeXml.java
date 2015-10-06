@@ -47,7 +47,7 @@ public class UtilidadeXml{
 		try{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			db.parse(new File(nomeDoc));
+			d = db.parse(new File(nomeDoc));
 		}catch(Exception e){
 			e.printStackTrace();
 			d = null;
@@ -98,5 +98,6 @@ public class UtilidadeXml{
 			e.printStackTrace();
 		}
 	}
+
 	
 }
