@@ -1,3 +1,6 @@
+package net.iessanclemente.xml.axenda;
+import static net.iessanclemente.xml.utilidades.UtilidadeXml.*;
+import org.w3c.dom.*;
 public class LeeAxenda{
 	
 	/*
@@ -11,7 +14,17 @@ public class LeeAxenda{
 	6 Engade elementos de tipo correoe e xera axenda3.xml co contido actual do documento en memoria.
 	*/
 	public static void main(String... args){
+		Document d = XMLaDOM("/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda.xml");
 
+		mostraElementoRaiz(d);
+		amosaDoc(d);
+		Document borrado = borraElementosEtiqueta("telefono",d);
+		DOMaXML(borrado,"/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda1.xml");
+		Document borrado2 = borraElementosEtiqueta("enderezo",d);
+		DOMaXML(borrado2,"/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda2.xml");
+		
 		
 	}
+
+	
 }

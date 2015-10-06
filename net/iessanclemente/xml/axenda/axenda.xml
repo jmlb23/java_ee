@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<axenda>
+<contacto id="1">
+<nome>pepe</nome>
+<telefono>1111</telefono>
+<enderezo>
+<rua>rua 1</rua>
+<numero>1</numero>
+</enderezo>
+</contacto>
+<contacto id="2">
+<nome>xoan</nome>
+<telefono>2222</telefono>
+<enderezo>
+<rua>rua 2</rua>
+<numero>2</numero>
+</enderezo>
+</contacto>
+<contacto id="3">
+<nome>ramon</nome>
+<telefono>3333</telefono>
+<enderezo>
+<rua>rua 3</rua>
+<numero>3</numero>
+</enderezo>
+</contacto>
+<contacto id="4">
+<nome>antonio</nome>
+<telefono>4444</telefono>
+<enderezo>
+<rua>rua 4</rua>
+<numero>4</numero>
+</enderezo>
+</contacto>
+<contacto id="5">
+<nome>breixo</nome>
+<telefono>5555</telefono>
+<enderezo>
+<rua>rua 5</rua>
+<numero>5</numero>
+</enderezo>
+</contacto>
+<contacto id="6">
+<nome>ramiro</nome>
+<telefono>6666</telefono>
+<enderezo>
+<rua>rua 6</rua>
+<numero>6</numero>
+</enderezo>
+</contacto>
+</axenda>

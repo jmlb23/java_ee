@@ -31,7 +31,7 @@ public class CreaAxenda{
 			sub.appendChild(subSub);
 			d.getFirstChild().appendChild(sub);
 		}
-		DOMaXML(d,"/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/proba.xml");
+		DOMaXML(d,"/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda.xml");
 		/*
 
 		<axenda>
