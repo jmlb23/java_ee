@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<axenda>
+<contacto id="1">
+<nome>pepe</nome>
+
+
+<correoe>0</correoe>
+</contacto>
+<contacto id="2">
+<nome>xoan</nome>
+
+
+<correoe>1</correoe>
+</contacto>
+<contacto id="3">
+<nome>ramon</nome>
+
+
+<correoe>2</correoe>
+</contacto>
+<contacto id="4">
+<nome>antonio</nome>
+
+
+<correoe>3</correoe>
+</contacto>
+<contacto id="5">
+<nome>breixo</nome>
+
+
+<correoe>4</correoe>
+</contacto>
+<contacto id="6">
+<nome>ramiro</nome>
+
+
+<correoe>5</correoe>
+</contacto>
+</axenda>

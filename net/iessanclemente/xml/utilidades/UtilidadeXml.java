@@ -64,11 +64,13 @@ public class UtilidadeXml{
 	public static void mostraElementoRaiz(Document doc){
 		Element e = doc.getDocumentElement();
 
-		//amosar por xanela	
+		//amosar por xanela
+		System.out.println("amoso o raiz");	
 		System.out.println(e.getTagName());
 	}
 	
 	public static void mostraContidoElementos(Element el){
+		System.out.println("amoso o contido do elemento");
 		System.out.println(el.getTagName());
 	}
 
@@ -119,6 +121,7 @@ public class UtilidadeXml{
 			transformer.transform(source, result);
 			//imprimo o buffer
 			String xmlString = result.getWriter().toString();
+			System.out.println("amoso o document");
 			System.out.println(xmlString);
 		}catch(Exception e){
 			e.printStackTrace();

@@ -14,17 +14,22 @@ public class LeeAxenda{
 	6 Engade elementos de tipo correoe e xera axenda3.xml co contido actual do documento en memoria.
 	*/
 	public static void main(String... args){
-		Document d = XMLaDOM("/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda.xml");
+		Document d = XMLaDOM("/home/jesus/Escritorio/acesoAD/net/iessanclemente/xml/axenda/axenda.xml");
 
 		mostraElementoRaiz(d);
 		amosaDoc(d);
 		Document borrado = borraElementosEtiqueta("telefono",d);
-		DOMaXML(borrado,"/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda1.xml");
+		DOMaXML(borrado,"/home/jesus/Escritorio/acesoAD/net/iessanclemente/xml/axenda/axenda1.xml");
 		Document borrado2 = borraElementosEtiqueta("enderezo",d);
-		DOMaXML(borrado2,"/home/jesus/Escritorio/AcesoAD/net/iessanclemente/xml/axenda/axenda2.xml");
-		
+		DOMaXML(borrado2,"/home/jesus/Escritorio/acesoAD/net/iessanclemente/xml/axenda/axenda2.xml");
+		NodeList e = d.getElementsByTagName("contacto");
+		for(int i = 0; i<e.getLength();i++){
+			Element el = (Element)e.item(i);
+			el.appendChild(creaElementoTexto("correoe",""+i,d));
+		}
+		DOMaXML(d,"/home/jesus/Escritorio/acesoAD/net/iessanclemente/xml/axenda/axenda3.xml");	
 		
 	}
-
+	
 	
 }
