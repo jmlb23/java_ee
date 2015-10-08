@@ -1,18 +1,1 @@
-<persoas>
-  <xstream.Persoa>
-    <nome>persoa0</nome>
-    <idade>18</idade>
-  </xstream.Persoa>
-  <xstream.Persoa>
-    <nome>persoa1</nome>
-    <idade>70</idade>
-  </xstream.Persoa>
-  <xstream.Persoa>
-    <nome>persoa2</nome>
-    <idade>79</idade>
-  </xstream.Persoa>
-  <xstream.Persoa>
-    <nome>persoa3</nome>
-    <idade>89</idade>
-  </xstream.Persoa>
-</persoas>
+<persoas/>

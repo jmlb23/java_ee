@@ -2,30 +2,32 @@ package xstream;
 import java.util.ArrayList;
 import java.util.*;
 import java.io.*;
+import static net.iessanclemente.stream.Producto.*;
+import  net.iessanclemente.stream.*;
 import com.thoughtworks.xstream.XStream;
 public class LeeXstream{
 	
-	public static ArrayList<Persoa> encher(ArrayList<Persoa> lista){
+	public static ArrayList<Producto> encher(ArrayList<Producto> lista){
 		//so existe neste ambito unha vez o avandona pasa o gc
 		//porque temos que darnos conta de que actua o new sobre a variable local
 		//é como se fixesemos list = this.lista
 		//non hai ningunha referencia a list e pasa o gc
 		lista = new ArrayList<>();
 		for(int i = 0; i<4; i++){
-			lista.add(new Persoa("persoa"+i,(int)(Math.random()*100)));
+			lista.add(new Producto(i,"nome "+i,Math.random()*100));
 		}
 		
 		return lista;
 	}
 
-	public static void escrebe(ArrayList<Persoa> lista){
-		File f = new File("Persoas.dat");
+	public static void escrebe(ArrayList<Producto> lista){
+		File f = new File("/home/jesus/Escritorio/acesoAD/xstream/productos.dat");
 		try(
 		
 			OutputStream os = new FileOutputStream(f);
 			ObjectOutputStream oos = new ObjectOutputStream(os);
 		){
-		for(Persoa p : lista){
+		for(Producto p : lista){
 			oos.writeObject(p);
 		}
 		}catch(IOException e){
@@ -33,9 +35,9 @@ public class LeeXstream{
 		}
 	}
 
-	public static ArrayList<Persoa> lee(){
-		ArrayList<Persoa> p = new ArrayList<>();
-		File f = new File("Persoas.dat");
+	public static ArrayList<Producto> lee(){
+		ArrayList<Producto> p = new ArrayList<>();
+		File f = new File("/home/jesus/Escritorio/acesoAD/xstream/productos.dat");
 
 		try(
 			InputStream io = new FileInputStream(f);
@@ -43,7 +45,7 @@ public class LeeXstream{
 		){
 		
 			while(io.available()>0)
-				p.add((Persoa)ois.readObject());
+				p.add((Producto)ois.readObject());
 		}catch(IOException |ClassNotFoundException e){
 			e.printStackTrace();
 		}
@@ -55,14 +57,16 @@ public class LeeXstream{
 	}
 
 	public static void main(String... args){
-		ArrayList<Persoa> lista=null;
+		ArrayList<Producto> lista=null;
 		lista = encher(lista);
 		escrebe(lista);
-		ArrayList<Persoa> v = lee();
+		ArrayList<Producto> v = lee();
 		try{
 			XStream xst = new XStream();
-			xst.alias("persoas",List.class);
-			xst.toXML(v, new FileOutputStream("persoas.xml"));
+			xst.alias("productos",List.class);
+			xst.alias("Producto",Producto.class);
+
+			xst.toXML(v, new FileOutputStream("/home/jesus/Escritorio/acesoAD/xstream/productos.xml"));
 		}catch(Exception e){
 			e.printStackTrace();
 		}

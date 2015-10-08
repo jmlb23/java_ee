@@ -44,7 +44,7 @@ public class MProducto
 	public static void lee(){
 		java.io.ObjectInputStream is = null;
 		try{
-			is = new java.io.ObjectInputStream(new java.io.FileInputStream(new java.io.File("/home/jesus/Escritorio/acesoDatos/net/iessanclemente/stream/productos.dat")));
+			is = new java.io.ObjectInputStream(new java.io.FileInputStream(new java.io.File("/home/jesus/Escritorio/acesoAD/net/iessanclemente/stream/productos.dat")));
 			while(true){
 				System.out.println((Producto)is.readObject());
 			}

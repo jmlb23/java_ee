@@ -1,0 +1,22 @@
+<productos>
+  <Producto>
+    <identificador>0</identificador>
+    <nomeProducto>nome 0</nomeProducto>
+    <prezo>49.45553883188254</prezo>
+  </Producto>
+  <Producto>
+    <identificador>1</identificador>
+    <nomeProducto>nome 1</nomeProducto>
+    <prezo>18.657297773771532</prezo>
+  </Producto>
+  <Producto>
+    <identificador>2</identificador>
+    <nomeProducto>nome 2</nomeProducto>
+    <prezo>10.841029349353093</prezo>
+  </Producto>
+  <Producto>
+    <identificador>3</identificador>
+    <nomeProducto>nome 3</nomeProducto>
+    <prezo>27.057383873761843</prezo>
+  </Producto>
+</productos>
