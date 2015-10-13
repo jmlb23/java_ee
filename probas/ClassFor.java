@@ -6,7 +6,7 @@ public class ClassFor{
 	//os elementos static sempre se cargan o principio
 	// driver de mysql precisamente funciona asi
 	/**
-	*@see https://github.com/mysql/mysql-connector-j/blob/release/5.1/src/com/mysql/jdbc/Driver.java
+	*@see <a href="https://github.com/mysql/mysql-connector-j/blob/release/5.1/src/com/mysql/jdbc/Driver.java">mysql Driver.java</a>
 	*/
 	static{
 		System.out.println("hola dende un bloque static");
