@@ -1,13 +1,14 @@
 package probas;
 
+/**
+*como funciona ClassFor e relacion co dirver de mysql
+*@see <a href="https://github.com/mysql/mysql-connector-j/blob/release/5.1/src/com/mysql/jdbc/Driver.java">mysql Driver.java</a>
+*/
 public class ClassFor{
 	
 	//excutase porque esta cargada a clase en memoria e o bloque static xa esta cargado porque
 	//os elementos static sempre se cargan o principio
 	// driver de mysql precisamente funciona asi
-	/**
-	*@see <a href="https://github.com/mysql/mysql-connector-j/blob/release/5.1/src/com/mysql/jdbc/Driver.java">mysql Driver.java</a>
-	*/
 	static{
 		System.out.println("hola dende un bloque static");
 	}
