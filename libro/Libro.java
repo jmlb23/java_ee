@@ -1,4 +1,5 @@
 package libro;
+import java.util.Arrays;
 public class Libro implements java.io.Serializable{
 	private String isbn;
 	private String titulo;
@@ -39,6 +40,10 @@ public class Libro implements java.io.Serializable{
 	
 	public Integer getAno(){
 		return this.ano;
+	}
+	@Override
+	public String toString(){
+		return String.format("%s %s %s %d",this.isbn,this.titulo,Arrays.toString(autores),(int)this.ano);
 	}
 
 }
