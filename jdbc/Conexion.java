@@ -7,11 +7,12 @@ public class Conexion{
 		Connection con = null;
 		try{
 			Class.forName("com.mysql.jdbc.Driver");	
-			con = DriverManager.getConnection("jdbc:mysql://localhost/jesus","root","def456..");
+			con = DriverManager.getConnection("jdbc:mysql://dealumnos:3312/a10jesuslb","a10jesuslb","");
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("Select * from probas");
-			
-			System.out.println(rs);
+			while(rs.next()){
+				System.out.println(rs.getString("DNI"));
+			}
 			
 		}catch(SQLException | ClassNotFoundException e){
 			System.out.println(e.getMessage());
