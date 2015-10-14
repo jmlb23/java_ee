@@ -46,10 +46,10 @@ public class Alumno{
 		return this.dni;
 	}
 	public String getNome(){
-		return this.Nome;
+		return this.nome;
 	}
 	public String getApelidos(){
-		return this.Apelidos;
+		return this.apelidos;
 	}
 	public int getIdade(){
 		return this.idade;
