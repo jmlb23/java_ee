@@ -75,7 +75,11 @@ public class OperacionsBD{
 	public String getPass(){
 		return this.contrasinal;
 	}
-
+	
+	public String getErro(){
+		return this.erro;
+	}
+	
 	public void abrirConexion(){
 		
 		try{
@@ -84,6 +88,10 @@ public class OperacionsBD{
 
 			this.erro += "\nErro Sql"+ e.getMessage();
 			return;
+		
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
 		}
 	}
 	
@@ -94,6 +102,10 @@ public class OperacionsBD{
 
 			this.erro += "\nErro Sql"+ e.getMessage();
 			return;
+		
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
 		}
 	}
 	
@@ -109,6 +121,10 @@ public class OperacionsBD{
 			
 			this.erro += "\nErro Sql"+ e.getMessage();
 	
+		
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
 		}
 	}
 
@@ -123,6 +139,10 @@ public class OperacionsBD{
 		
 
 			this.erro += "\nErro Sql"+ e.getMessage();
+		
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
 		}
 		return al;
 	}
@@ -133,7 +153,11 @@ public class OperacionsBD{
                 }catch(SQLException e){
 
 			this.erro += "\nErro Sql"+ e.getMessage();
-                }
+                
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
+		}
 	}
 
 	public void modificarAlumno(Alumno a){
@@ -147,7 +171,10 @@ public class OperacionsBD{
                 }catch(SQLException e){
 
 			this.erro += "\nErro Sql"+ e.getMessage();
-                }
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
+		}
 	}
 	public List<Alumno> listaAlumnos(){
 		List<Alumno> lista = new ArrayList<>();
@@ -162,7 +189,10 @@ public class OperacionsBD{
                 }catch(SQLException e){
 
 			this.erro += "\nErro Sql"+ e.getMessage();
-                }
+                }catch(Exception e){
+
+			this.erro += "\nErro xeral"+ e.getMessage();
+		}
 
 		return lista;
 	}
