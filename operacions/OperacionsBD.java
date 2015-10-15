@@ -32,18 +32,58 @@ public class OperacionsBD{
 		try{
 		Class.forName(fullyQualifiedDriver);
 		}catch(ClassNotFoundException e){
-			System.out.println("O driver non se puido cargar");
+			this.erro = "\n Erro o cargar o driver"+e.getMessage();
 		}
 		
 	}
+
+	/**
+        *@param java.lang.String fullyQualifiedDriver o nome do driver
+        *@param	java.lang.String url cadea de conexion
+	*@param	java.lang.String usurio nome do usuairo para a conexion
+	*@param	java.lang.String contrasinal contrasinal do inicio de session asociado o usuario
+        */
+
+	public OperacionsBD(String fullyQualifiedDriver,String url,String usuario,String contrasinal){
+		this(fullyQualifiedDriver);
+		this.url = url;
+		this.usuario = usuario;
+		this.contrasinal = contrasinal;
+	}
+		
 	
+	public void setUrl(String url){
+		this.url = url;
+	}
+
+	public void setUser(String usuario){
+		this.usuario = usuario;
+	}
+
+	public void setPass(String contrasinal){
+		this.contrasinal = contrasinal;
+	}
+
+	public String getUrl(){
+		return this.url;
+	}
+
+	public String getUser(){
+		return this.usuario;
+	}
+
+	public String getPass(){
+		return this.contrasinal;
+	}
 
 	public void abrirConexion(){
+		
 		try{
 			con = DriverManager.getConnection(this.url,this.usuario,this.contrasinal);
 		}catch(SQLException e){
 
-			this.erro = e.getMessage();
+			this.erro += "\nErro Sql"+ e.getMessage();
+			return;
 		}
 	}
 	
@@ -51,7 +91,9 @@ public class OperacionsBD{
 		try{
 			this.con.close();
 		}catch(SQLException e){
-			this.erro = e.getMessage();
+
+			this.erro += "\nErro Sql"+ e.getMessage();
+			return;
 		}
 	}
 	
@@ -65,7 +107,8 @@ public class OperacionsBD{
 		stm.executeUpdate();
 		}catch(SQLException e){
 			
-			this.erro = e.getMessage();
+			this.erro += "\nErro Sql"+ e.getMessage();
+	
 		}
 	}
 
@@ -77,8 +120,9 @@ public class OperacionsBD{
 			rs.next();
 			al = new Alumno(rs.getString("DNI"),rs.getString("nome"),rs.getString("apelidos"),rs.getInt("idade"));
 		}catch(SQLException e){
-			this.erro = e.getMessage();
+		
 
+			this.erro += "\nErro Sql"+ e.getMessage();
 		}
 		return al;
 	}
@@ -88,21 +132,21 @@ public class OperacionsBD{
                 	stm.executeUpdate();
                 }catch(SQLException e){
 
-                        this.erro = e.getMessage();
+			this.erro += "\nErro Sql"+ e.getMessage();
                 }
 	}
 
 	public void modificarAlumno(Alumno a){
-		try(PreparedStatement stm = con.prepareStatement("update alumno set DNI = ?, nome = ?, apelidos = ?, idade = ? ");){
+		try(PreparedStatement stm = con.prepareStatement("update alumno set  nome = ?, apelidos = ?, idade = ? where DNI = ?");){
 
-                stm.setString(1,a.getDni());
-                stm.setString(2,a.getNome());
-                stm.setString(3,a.getApelidos());
-                stm.setInt(4,a.getIdade());
+                stm.setString(1,a.getNome());
+                stm.setString(2,a.getApelidos());
+                stm.setInt(3,a.getIdade());
+                stm.setString(4,a.getDni());
                 stm.executeUpdate();
                 }catch(SQLException e){
 
-                        this.erro = e.getMessage();
+			this.erro += "\nErro Sql"+ e.getMessage();
                 }
 	}
 	public List<Alumno> listaAlumnos(){
@@ -116,8 +160,8 @@ public class OperacionsBD{
 				lista.add(a);
 			}
                 }catch(SQLException e){
-                        this.erro = e.getMessage();
 
+			this.erro += "\nErro Sql"+ e.getMessage();
                 }
 
 		return lista;

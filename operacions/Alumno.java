@@ -57,6 +57,6 @@ public class Alumno{
 	
 
 	public @Override String toString(){
-		return String.format("%s %s %s %i",this.dni,this.nome,this.apelidos,this.idade);
+		return String.format("%s %s %s %d",this.dni,this.nome,this.apelidos,this.idade);
 	}
 }
