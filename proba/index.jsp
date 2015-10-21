@@ -1,5 +1,5 @@
 <%@ page import="java.util.*" %> <!-- podemos poñer unha directiva por cada import ou nunha separar todo por comas-->
-<jsp:directive.page import="java.util.ArrayList" /> <!-- temos formato xml ou etiqueta jsp
+<jsp:directive.page import="java.util.ArrayList" /> <!-- temos formato xml ou etiqueta jsp -->
 
 <!DOCTYPE hmtl>
 <html>
