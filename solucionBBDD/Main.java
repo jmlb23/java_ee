@@ -15,7 +15,7 @@ public class Main{
 		
 			case 1:
 				limpa(100);
-				System.out.println("introduce os datos do alumno");
+				System.out.println("introduce os datos do alumno\nstring\nstring\nstring\nnumero");
 				o.engadeAlumno(new Alumno(sca.nextLine(),sca.nextLine(),sca.nextLine(),sca.nextInt()));
 			break;
 			case 2:
@@ -27,25 +27,27 @@ public class Main{
 			case 3:
 				limpa(100);
 				
-				System.out.println("introduce os datos do alumno");
-				o.engadeAlumno(new Alumno(sca.nextLine(),sca.nextLine(),sca.nextLine(),sca.nextInt()));
+				System.out.println("introduce os datos do alumno\nstring\nstring\nstring\nnumero");
+				o.modificarAlumno(new Alumno(sca.nextLine(),sca.nextLine(),sca.nextLine(),sca.nextInt()));
 			break;
 			case 4:
 				limpa(100);
 				System.out.println("introduce o dni do alumno");
-				o.consultaAlumno(sca.next());
+				System.out.println(o.consultaAlumno(sca.next()));
 			break;
 			case 5:
 				limpa(100);
 				o.listaAlumnos().stream().forEach(System.out::println);
 			break;
 			case 6:
+
+			default:
 				System.out.println("saindo....");
 				flag = false;
 			break;
 		}
 		
-			if(o.getErro()!=null)System.out.println(o.getErro());
+		if(o.getErro()!=null)System.out.println(o.getErro());
 		}
 		o.cerraConexion();
 

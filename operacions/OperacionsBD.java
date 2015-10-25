@@ -110,6 +110,8 @@ public class OperacionsBD{
 	}
 	
 	public void engadeAlumno(Alumno a){
+		//se implementa o recurso que metemos no try a interface closeable
+		//o try with resources ocupase do peche do resurso en si
 		try(PreparedStatement stm = con.prepareStatement("insert into alumno(DNI,nome,apelidos,idade) values(?,?,?,?)");){
 		
 		stm.setString(1,a.getDni());
