@@ -1,4 +1,4 @@
-package Exercicio2b.utilidades.obxetosBase;
+package modelo.obxetosBase;
 
 
 import java.sql.Date;

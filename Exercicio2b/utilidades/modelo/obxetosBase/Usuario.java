@@ -1,4 +1,4 @@
-package Exercicio2b.utilidades.obxetosBase;
+package modelo.obxetosBase;
 
 /*
 idUsuario | int(11)      | NO   | PRI | NULL    | auto_increment |

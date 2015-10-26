@@ -1,4 +1,4 @@
-package Exercicio2b.utilidades;
+package modelo.daos;
 
 import Exercicio2b.utilidades.obxetosBase.*;
 import java.util.*;

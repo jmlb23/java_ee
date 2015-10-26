@@ -1,4 +1,4 @@
-package Exercicio2b.utilidades;
+package modelo.daos;
 
 
 import java.sql.*;
