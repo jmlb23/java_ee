@@ -1,0 +1,45 @@
+*{
+	border-radius: 15px;
+	font-family: "monospace";
+}
+
+header {
+	text-align: center;
+}
+nav ul li{
+	display: inline;
+	margin: 6%;
+}
+nav ul li a{
+	text-decoration: none;
+}
+a:visited{
+	color:white;
+}
+a:hover{
+	background-color:black;
+	
+}
+nav{
+	border: 1px solid black;
+}
+body div{
+	border: 1px solid black;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: grey;
+	padding-bottom: 100%;
+}
+
+input{
+	display: block;
+}
+
+section{
+	margin:33%;
+}
+
+
+td{
+	border: 1px solid black;
+}
