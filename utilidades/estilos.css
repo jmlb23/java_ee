@@ -1,0 +1,71 @@
+*{
+	border-radius: 15px;
+}
+
+button, input[type=submit]{
+	width: 120px;
+	height: 24px;
+	border-radius: 16px;
+	border-radius: 16px;
+	border: 2px solid #ccc;
+	color: #fff;
+	text-shadow: rgba(10, 10, 10, 0.5) 1px 2px 2px;
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+	overflow: hidden;
+	background: linear-gradient(green,white);
+}
+input[type=submit]{
+
+	margin-top: 6px;
+}
+form{
+	margin-left: 45%;
+}
+h1{
+	text-align: center;
+}
+
+header {
+	text-align: center;
+}
+
+nav ul li{
+	display: inline;
+	margin: 6%;
+}
+nav ul li a{
+	text-decoration: none;
+	color:aquamarine;
+}
+a:visited{
+	color:white;
+}
+a:hover{
+	background-color:black;
+	
+}
+nav{
+	border-radius: 0px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	
+}
+body div{
+	border: 1px solid black;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: grey;
+	padding-bottom: 100%;
+}
+
+input{
+	display: block;
+}
+
+section{
+	margin:33%;
+	margin-top:16%;
+}
+
+
