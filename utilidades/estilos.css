@@ -6,6 +6,7 @@
 header {
 	text-align: center;
 }
+
 nav ul li{
 	display: inline;
 	margin: 6%;
@@ -21,7 +22,10 @@ a:hover{
 	
 }
 nav{
-	border: 1px solid black;
+	border-radius: 0px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	
 }
 body div{
 	border: 1px solid black;
@@ -37,9 +41,7 @@ input{
 
 section{
 	margin:33%;
+	margin-top:16%;
 }
 
 
-td{
-	border: 1px solid black;
-}

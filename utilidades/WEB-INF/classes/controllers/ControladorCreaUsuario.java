@@ -7,17 +7,9 @@ import java.io.*;
 import modelo.obxetosBase.*;
 import modelo.daos.*;
 
-@WebServlet("/xestionUsuarios")
-public class ControladorUsuarios extends HttpServlet{
+@WebServlet("/creaUsuario")
+public class ControladorCreaUsuarios extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
-		UsuarioDao d = new UsuarioDao();
-		int n = 0;
-		for(Usuario u : d.selectAll()){
-			req.setAttribute("user"+n, u);
-			n++;
-		}
-  
-                 req.getRequestDispatcher("inicio.jsp").forward(req,res);	
 		
 	}
 

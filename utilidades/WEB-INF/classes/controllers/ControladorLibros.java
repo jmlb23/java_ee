@@ -13,7 +13,7 @@ public class ControladorLibros extends HttpServlet{
 		LibroDao d = new LibroDao();
 		int n = 0;
 		for(Libro l : d.selectAll()){
-			req.setAttribute("user"+n, l.toString());
+			req.setAttribute("user"+n, l);
 			n++;
 		}
 
